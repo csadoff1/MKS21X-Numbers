@@ -2,12 +2,12 @@ public class RealNumber{
   private double x = 10;
 
   public double getX() {
-    return x;
+    return 3;
   }
   public void setX(double X) {
-    x = X;
+  //  x = X;
   }
   public String toString() {
-    return "Real number: " + x;
+    return "";
   }
 }
