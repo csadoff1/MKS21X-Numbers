@@ -1,13 +1,17 @@
 public class RealNumber{
-  private double x = 10;
+  private double val;
 
-  public double getX() {
-    return x;
+  public RealNumber(double v) {
+    val = v;
   }
-  public void setX(double X) {
-    x = X;
+
+  public double getValue() {
+    return v;
+  }
+  public void setValue(double V) {
+    v = V;
   }
   public String toString() {
-    return "Real number: " + x;
+    return "Real number: " + v;
   }
 }
