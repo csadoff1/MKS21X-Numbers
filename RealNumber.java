@@ -1,17 +1,20 @@
 public class RealNumber{
   private double val;
 
-  public RealNumber(double v) {
-    val = v;
+  public RealNumber() {
+    
+  }
+  public RealNumber(double val) {
+    this.val = val;
   }
 
   public double getValue() {
-    return v;
+    return val;
   }
   public void setValue(double V) {
-    v = V;
+    val = V;
   }
   public String toString() {
-    return "Real number: " + v;
+    return "Value: " + val;
   }
 }
