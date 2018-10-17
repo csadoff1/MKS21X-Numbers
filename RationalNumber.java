@@ -1,22 +1,26 @@
 public class RationalNumber extends RealNumber{
-  private int x, y;
+  private int nume, deno;
 
-  public double toRatio() {
-    return x/y;
+  public RationalNumber(int num, int den) {
+    nume = 14;
+    deno = 49;
   }
-  public int getX() {
-    return x;
+
+  public double getValue() {
+    return nume/deno;
   }
-  public int getY() {
-    return y;
+  public int getNumerator() {
+    return nume;
   }
-  public void setX(int X) {
-    x=X;
-  }
-  public void setY(int Y) {
-    y=Y;
+  public int getDenominator() {
+    return deno;
   }
   public String toString() {
-    return getX() + "//" + getY();
+    return getNumerator() + "//" + getDenominator();
   }
+  public RationalNumber reciprocal(int num, int den) {
+    RationalNumber recip = new RationalNumber(den, num);
+    return recip;
+  }
+//  public boolean equals()
 }
