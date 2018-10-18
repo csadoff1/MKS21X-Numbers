@@ -54,4 +54,7 @@ public class RationalNumber extends RealNumber{
     this.getDenominator()*other.getDenominator());
     return product;
   }
+  public RationalNumber divide(RationalNumber other) {
+    return this.multiply(other.reciprocal());
+  }
 }
