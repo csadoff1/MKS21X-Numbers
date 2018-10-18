@@ -28,17 +28,20 @@ public class RationalNumber extends RealNumber{
             && this.getDenominator() == other.getDenominator());
   }
   public static int gcd(int a, int b) {
+    int result = 0;
     if (a<b) {
       a=b;
       b=a;
+      gcd (a,b);
     }
       if (a%b == 0) {
-        return b;
+        result = b;
       }
       else {
         a=b;
         b=a%b;
         gcd (a,b);
       }
+      return result;
   }
 }
