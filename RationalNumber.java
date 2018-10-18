@@ -3,7 +3,7 @@ public class RationalNumber extends RealNumber{
 
   public RationalNumber(int nume, int deno) {
     super(0.0);
-    if (deno==0) {
+    if (deno == 0) {
       nume = 0;
       deno = 1;
     }
@@ -23,7 +23,15 @@ public class RationalNumber extends RealNumber{
     return deno;
   }
   public String toString() {
-    return getNumerator() + "//" + getDenominator();
+    if (deno == 1) {
+      return "" + getNumerator();
+    }
+    if (nume == 0) {
+      return "" + 0;
+    }
+    else {
+      return "" + getNumerator() + "/" + getDenominator();
+    }
   }
   public RationalNumber reciprocal() {
     RationalNumber recip = new RationalNumber(deno, nume);
@@ -33,26 +41,20 @@ public class RationalNumber extends RealNumber{
     return (this.getNumerator() == other.getNumerator()
             && this.getDenominator() == other.getDenominator());
   }
+
   public static int gcd(int a, int b) {
-    int result = 0;
-    if (a<b) {
-      a=b;
-      b=a;
-      gcd (a,b);
+    if (b != 0) {
+      return gcd(b, a%b);
     }
-      if (a%b == 0) {
-        result = b;
-      }
-      else {
-        a=b;
-        b=a%b;
-        gcd (a,b);
-      }
-      return result;
+    return a;
   }
   private void reduce() {
     nume = nume/gcd(nume, deno);
     deno = deno/gcd(nume, deno);
+    if (deno==0) {
+      nume = 0;
+      deno = 1;
+    }
   }
   public RationalNumber multiply(RationalNumber other) {
     RationalNumber product = new RationalNumber

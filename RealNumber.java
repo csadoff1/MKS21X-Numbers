@@ -6,7 +6,7 @@ public class RealNumber{
   }
 
   public double getValue() {
-    return val;
+    return (double)val;
   }
 
   public String toString() {
@@ -14,19 +14,19 @@ public class RealNumber{
   }
 
   public double add(RealNumber other) {
-    return this.getValue() + other.getValue();
+    return 0.0 + this.getValue() + other.getValue();
   }
 
   public double subtract(RealNumber other) {
-    return this.getValue() - other.getValue();
+    return 0.0 + this.getValue() - other.getValue();
   }
 
   public double multiply(RealNumber other) {
-    return this.getValue()*other.getValue();
+    return 0.0 + this.getValue()*other.getValue();
   }
 
   public double divide(RealNumber other) {
-    return this.getValue()/other.getValue();
+    return 0.0 + this.getValue()/other.getValue();
   }
 
 }
