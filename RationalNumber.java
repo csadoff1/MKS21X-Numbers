@@ -44,4 +44,10 @@ public class RationalNumber extends RealNumber{
       }
       return result;
   }
+  public RationalNumber multiply(RationalNumber other) {
+    RationalNumber product = new RationalNumber
+    (this.getNumerator()*other.getNumerator(),
+    this.getDenominator()*other.getDenominator());
+    return product;
+  }
 }
