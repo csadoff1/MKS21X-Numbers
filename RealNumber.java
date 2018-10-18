@@ -17,6 +17,10 @@ public class RealNumber{
     return this.getValue() + other.getValue();
   }
 
+  public double subtract(RealNumber other) {
+    return this.getValue() - other.getValue();
+  }
+
   public double multiply(RealNumber other) {
     return this.getValue()*other.getValue();
   }
