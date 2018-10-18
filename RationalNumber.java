@@ -44,6 +44,10 @@ public class RationalNumber extends RealNumber{
       }
       return result;
   }
+  private void reduce() {
+    nume = nume/gcd(nume, deno);
+    deno = deno/gcd(nume, deno);
+  }
   public RationalNumber multiply(RationalNumber other) {
     RationalNumber product = new RationalNumber
     (this.getNumerator()*other.getNumerator(),
