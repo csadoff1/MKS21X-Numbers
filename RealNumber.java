@@ -16,4 +16,9 @@ public class RealNumber{
   public double add(RealNumber other) {
     return this.getValue() + other.getValue();
   }
+
+  public double multiply(RealNumber other) {
+    return this.getValue()*other.getValue();
+  }
+
 }
