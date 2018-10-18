@@ -2,7 +2,7 @@ public class RationalNumber extends RealNumber{
   private int nume, deno;
 
   public RationalNumber(int nume, int deno) {
-    super(((double)nume)/deno);
+    super(0.0);
     this.nume = nume;
     this.deno = deno;
   }
