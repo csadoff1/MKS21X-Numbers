@@ -3,8 +3,14 @@ public class RationalNumber extends RealNumber{
 
   public RationalNumber(int nume, int deno) {
     super(0.0);
-    this.nume = nume;
-    this.deno = deno;
+    if (deno==0) {
+      nume = 0;
+      deno = 1;
+    }
+    else {
+      this.nume = nume/gcd(nume,deno);
+      this.deno = deno/gcd(nume,deno);
+    }
   }
 
   public double getValue() {
