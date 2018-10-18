@@ -57,4 +57,11 @@ public class RationalNumber extends RealNumber{
   public RationalNumber divide(RationalNumber other) {
     return this.multiply(other.reciprocal());
   }
+  public RationalNumber add(RationalNumber other) {
+    RationalNumber sum = new RationalNumber
+    (this.getNumerator()*other.getDenominator() +
+    other.getNumerator()*this.getDenominator(),
+    this.getDenominator()*other.getDenominator());
+    return sum;
+  }
 }
