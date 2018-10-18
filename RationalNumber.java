@@ -64,4 +64,11 @@ public class RationalNumber extends RealNumber{
     this.getDenominator()*other.getDenominator());
     return sum;
   }
+  public RationalNumber subtract(RationalNumber other) {
+    RationalNumber difference = new RationalNumber
+    (this.getNumerator()*other.getDenominator() -
+    other.getNumerator()*this.getDenominator(),
+    this.getDenominator()*other.getDenominator());
+    return difference;
+  }
 }
